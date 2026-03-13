@@ -1,0 +1,11 @@
+export const slides = [
+  { id: 1, content: "https://swiperjs.com/demos/images/nature-1.jpg" },
+  { id: 2, content: "https://swiperjs.com/demos/images/nature-2.jpg" },
+  { id: 3, content: "https://swiperjs.com/demos/images/nature-3.jpg" },
+  { id: 4, content: "https://swiperjs.com/demos/images/nature-4.jpg" },
+  { id: 5, content: "https://swiperjs.com/demos/images/nature-5.jpg" },
+  { id: 6, content: "https://swiperjs.com/demos/images/nature-6.jpg" },
+  { id: 7, content: "https://swiperjs.com/demos/images/nature-7.jpg" },
+  { id: 8, content: "https://swiperjs.com/demos/images/nature-8.jpg" },
+  { id: 9, content: "https://swiperjs.com/demos/images/nature-9.jpg" },
+];
