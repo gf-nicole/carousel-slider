@@ -1,6 +1,5 @@
 "use client";
-//import ReactSlick from "../components/react-slick";
-import Sample from "../components/react-slick/sample";
+import ReactSlick from "../components/react-slick/index";
 
 const slides = [
   "https://swiperjs.com/demos/images/nature-1.jpg",
@@ -14,7 +13,7 @@ export default function ReactSlickPage() {
   return (
     <div className="flex flex-col justify-center items-center gap-y-6 py-16 w-full h-full max-w-7xl mx-auto!">
       <p>React Slick</p>
-      <Sample slidesToShow={3} autoplay autoplaySpeed={2500}>
+      <ReactSlick slidesToShow={3} autoplay autoplaySpeed={2500}>
         {slides.map((src, i) => (
           <div key={i} className="slide">
             <div className="slide-inner">
@@ -22,8 +21,7 @@ export default function ReactSlickPage() {
             </div>
           </div>
         ))}
-      </Sample>
-      {/* <ReactSlick totalSlides={3} /> */}
+      </ReactSlick>
     </div>
   );
 }
