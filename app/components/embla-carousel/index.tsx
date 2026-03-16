@@ -1,89 +1,9 @@
-// "use client";
-// import React, { useCallback } from "react";
-// import useEmblaCarousel from "embla-carousel-react";
-
-// /**
-//  * Props:
-//  * slides: React nodes array
-//  * slidesPerView: { mobile:number, tablet:number, desktop:number }
-//  * loop?: boolean
-//  * showButtons?: boolean
-//  * centerMode?: boolean
-//  */
-// export default function EmblaDynamicCarousel({
-//   slides = [],
-//   slidesPerView = { mobile: 1, tablet: 2, desktop: 3 },
-//   loop = false,
-//   showButtons = true,
-//   centerMode = false,
-// }) {
-//   const options = {
-//     loop,
-//     align: centerMode ? "center" : "start",
-//   };
-
-//   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-
-//   const scrollPrev = useCallback(() => {
-//     if (emblaApi) emblaApi.scrollPrev();
-//   }, [emblaApi]);
-
-//   const scrollNext = useCallback(() => {
-//     if (emblaApi) emblaApi.scrollNext();
-//   }, [emblaApi]);
-
-//   return (
-//     <div className="w-full">
-//       <div className="overflow-hidden" ref={emblaRef}>
-//         <div className="flex">
-//           {slides.map((slide, index) => (
-//             <div
-//               key={index}
-//               className="flex-shrink-0 px-2"
-//               style={{
-//                 width: `${100 / slidesPerView.mobile}%`,
-//               }}
-//             >
-//               {slide}
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//       {showButtons && (
-//         <div className="flex gap-4 mt-4">
-//           <button onClick={scrollPrev} className="px-4 py-2 border rounded">
-//             Prev
-//           </button>
-//           <button onClick={scrollNext} className="px-4 py-2 border rounded">
-//             Next
-//           </button>
-//         </div>
-//       )}
-
-//       <style jsx>{`
-//         @media (min-width: 640px) {
-//           .flex > div {
-//             width: ${100 / slidesPerView.tablet}%;
-//           }
-//         }
-
-//         @media (min-width: 1024px) {
-//           .flex > div {
-//             width: ${100 / slidesPerView.desktop}%;
-//           }
-//         }
-//       `}</style>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import React, { useCallback, ReactNode } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaOptionsType } from "embla-carousel";
-import "./embla.css";
+import "./index.css";
 
 export type SlidesPerView = {
   mobile: number;

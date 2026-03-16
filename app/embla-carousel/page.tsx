@@ -26,25 +26,28 @@ export default function EblaCarouselPage() {
     >
       Slide 4
     </div>,
-    // <div
-    //   key="slide-5"
-    //   className="bg-purple-200 h-40 flex items-center justify-center"
-    // >
-    //   Slide 5
-    // </div>,
+    <div
+      key="slide-5"
+      className="bg-purple-200 h-40 flex items-center justify-center"
+    >
+      Slide 5
+    </div>,
   ];
 
   return (
-    <EmblaDynamicCarousel
-      slides={slides}
-      slidesPerView={{
-        mobile: 1,
-        tablet: 2,
-        desktop: 4,
-      }}
-      loop
-      showButtons
-      centerMode={true}
-    />
+    <div className="flex flex-col justify-center items-center gap-y-6 py-16 w-full h-full max-w-7xl mx-auto!">
+      <p>React Slick</p>
+      <EmblaDynamicCarousel
+        slides={slides}
+        slidesPerView={{
+          mobile: 1,
+          tablet: 2,
+          desktop: 4,
+        }}
+        loop
+        showButtons
+        centerMode={true}
+      />
+    </div>
   );
 }
