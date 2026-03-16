@@ -8,4 +8,6 @@ export const slides = [
   { id: 7, content: "https://swiperjs.com/demos/images/nature-7.jpg" },
   { id: 8, content: "https://swiperjs.com/demos/images/nature-8.jpg" },
   { id: 9, content: "https://swiperjs.com/demos/images/nature-9.jpg" },
+  { id: 10, content: "https://swiperjs.com/demos/images/nature-10.jpg" },
+  { id: 11, content: "https://swiperjs.com/demos/images/nature-11.jpg" },
 ];

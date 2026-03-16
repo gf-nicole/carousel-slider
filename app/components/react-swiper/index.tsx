@@ -69,7 +69,14 @@ import { EffectCoverflow } from "swiper/modules";
 import { slides } from "@/lib/data";
 
 export default function ReactSwiper(props: any) {
-  const { label, totalSlides, ...rest } = props;
+  const {
+    label,
+    totalSlides,
+    mobile = 1,
+    tablet = 3,
+    desktop = 5,
+    ...rest
+  } = props;
   const displaySlides = slides.slice(0, totalSlides || slides.length);
   return (
     <div className="w-full max-h-120">
@@ -78,7 +85,7 @@ export default function ReactSwiper(props: any) {
         {...rest}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
+        slidesPerView={mobile}
         loop={true}
         coverflowEffect={{
           rotate: 0,
@@ -86,6 +93,14 @@ export default function ReactSwiper(props: any) {
           depth: 100,
           modifier: 4,
           slideShadows: true,
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: tablet,
+          },
+          992: {
+            slidesPerView: desktop,
+          },
         }}
         pagination={true}
         modules={[EffectCoverflow]}

@@ -10,17 +10,20 @@ export default function Home() {
         label="Coverflow Effect with 3 slides"
         effect={"coverflow"}
         totalSlides={3}
+        desktop={3}
       />
       <ReactSwiper
         label="Coverflow Effect with 5 slides"
         effect={"coverflow"}
         totalSlides={5}
+        desktop={3}
       />
 
       <ReactSwiper
-        label="Coverflow Effect with 7 slides"
+        label="Coverflow Effect with 9 slides"
         effect={"coverflow"}
-        totalSlides={7}
+        totalSlides={10}
+        desktop={3}
       />
 
       <code>

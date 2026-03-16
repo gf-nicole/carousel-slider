@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { slides } from "@/lib/data";
 
-import "./reactslick.css";
+import "./test.css";
 
 const NextArrow = ({ onClick }: CustomArrowProps) => {
   return (
@@ -73,72 +73,3 @@ const ReactSlick = (props: any) => {
 };
 
 export default ReactSlick;
-
-// "use client";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Slider, { Settings, CustomArrowProps } from "react-slick";
-// import { slides } from "@/lib/data";
-// import "./reactslick.css";
-
-// type Props = {
-//   totalSlides?: number;
-// };
-
-// const NextArrow = ({ onClick }: CustomArrowProps) => (
-//   <button className="carousel-arrow next" onClick={onClick}>
-//     →
-//   </button>
-// );
-
-// const PrevArrow = ({ onClick }: CustomArrowProps) => (
-//   <button className="carousel-arrow prev" onClick={onClick}>
-//     ←
-//   </button>
-// );
-
-// const ReactSlick = ({ totalSlides }: Props) => {
-//   const displaySlides = slides.slice(0, totalSlides || slides.length);
-
-//   const settings: Settings = {
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 3,
-//     arrows: true,
-//     nextArrow: <NextArrow />,
-//     prevArrow: <PrevArrow />,
-
-//     responsive: [
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           slidesToShow: 2,
-//         },
-//       },
-//       {
-//         breakpoint: 640,
-//         settings: {
-//           slidesToShow: 1,
-//         },
-//       },
-//     ],
-//   };
-
-//   return (
-//     <div className="carousel-wrapper">
-//       <Slider {...settings}>
-//         {displaySlides.map((slide) => (
-//           <div key={slide.id} className="slide-container">
-//             <img
-//               src={slide.content}
-//               alt={`Slide ${slide.id}`}
-//               className="carousel-image"
-//             />
-//           </div>
-//         ))}
-//       </Slider>
-//     </div>
-//   );
-// };
-
-// export default ReactSlick;
